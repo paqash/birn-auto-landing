@@ -10,7 +10,7 @@ import Stats from "../features/slides/stats";
 import Flag from "../features/slides/flag";
 import Money from "../features/slides/money";
 import Share from "../features/slides/share";
-import { navItems, resourcesUrl } from "../core/constants";
+import { fullPageKey, navItems, resourcesUrl } from "../core/constants";
 import Navigation from "../features/navigation/navigation";
 import HomePage from "../features/slides/homePage";
 
@@ -81,6 +81,7 @@ export default function Home() {
         <GlobalStyle />
         <NavBar />
         <ReactFullpage
+          licenseKey={fullPageKey}
           menu="#mainNavigation"
           anchors={navItems.map((i) => i.name)}
           onLeave={(origin) => {

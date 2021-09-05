@@ -1,3 +1,7 @@
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+
 export const resourcesBaseUrl =
   "https://birn-auto.s3.eu-central-1.amazonaws.com";
 export const resourcesUrl = `${resourcesBaseUrl}/images`;
@@ -17,3 +21,5 @@ export const screenResolutions = {
   small: 768,
   medium: 1280,
 };
+
+export const fullPageKey = publicRuntimeConfig.processEnv.FULLPAGE_KEY;
