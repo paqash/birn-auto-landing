@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-import { navItems } from "../../core/constants";
+import { navItems, screenResolutions } from "../../core/constants";
 
 const NavigationWrapper = styled.ul`
   color: #fff;
   position: absolute;
   z-index: 3;
-  right: -25px;
+  right: -50px;
   top: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    right: -25px;
+  }
 `;
 
 const Pil = styled.div`

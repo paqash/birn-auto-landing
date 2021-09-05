@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-import { resourcesUrl } from "../../core/constants";
+import { resourcesUrl, screenResolutions } from "../../core/constants";
 import { Container } from "../styled-components/app-components";
 
 const MyMoneyImage = styled.img`
-  width: 70%;
+  width: 50%;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    width: 70%;
+  }
 `;
 
 const MoneyWrapper = styled(Container)`

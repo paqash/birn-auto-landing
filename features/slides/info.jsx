@@ -14,16 +14,12 @@ import {
 export const InfoSlideWrapper = styled(Container)`
   opacity: 0;
   transition: opacity 1s ease-in 1s;
+  margin-top: 55px;
 `;
 
 const TextWrapper = styled.div`
   display: flex;
   align-items: center;
-  ${HightlightedText},
-  ${Text} {
-    font-size: 49pt;
-    line-height: 80px;
-  }
 `;
 
 const PlusButton = styled.div`
@@ -47,7 +43,7 @@ const InfoSlide = (props) => {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <InfoSlideWrapper>
+    <InfoSlideWrapper open={showInfo}>
       <Magnifier />
       <TextWrapper>
         <Text>

@@ -13,6 +13,10 @@ export const StatsWrapper = styled(Container)`
   transition: opacity 1s ease-in 1s;
 `;
 
+const TextWrapper = styled(Text)`
+  margin-top: 50px;
+`;
+
 const Stats = (props) => {
   return (
     <StatsWrapper>
@@ -22,12 +26,12 @@ const Stats = (props) => {
         političarke u BiH za limuzine{" "}
         <HightlightedText>potrošili ukupno xxxx KM.</HightlightedText>
       </Text>
-      <Text>
+      <TextWrapper>
         Samo ove godine je do sada za limuzine{" "}
         <HightlightedText>potrošeno xxxx KM</HightlightedText>, dok je za sve
         vrste vozila izdvojeno{" "}
         <HightlightedText>xxxx KM iz budžeta.</HightlightedText>
-      </Text>
+      </TextWrapper>
       <MainButton />
     </StatsWrapper>
   );

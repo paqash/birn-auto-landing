@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-import { resourcesBaseUrl, resourcesUrl } from "../../core/constants";
+import {
+  resourcesBaseUrl,
+  resourcesUrl,
+  screenResolutions,
+} from "../../core/constants";
 import {
   Container,
   HightlightedText,
@@ -24,7 +28,12 @@ const VideoPlayer = styled.video`
   z-index: 0;
 `;
 
-const ContainerWrapper = styled(Container)``;
+const ContainerWrapper = styled(Container)`
+  margin-top: 40px;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    margin-top: 0;
+  }
+`;
 
 const HomePage = () => {
   return (

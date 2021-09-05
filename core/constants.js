@@ -18,8 +18,8 @@ export const navItems = [
 export const dbUrl = "http://auta.detektor.ba/";
 
 export const screenResolutions = {
-  small: 768,
-  medium: 1280,
+  small: 769,
+  medium: 1537,
 };
 
 export const fullPageKey = publicRuntimeConfig.processEnv.FULLPAGE_KEY;

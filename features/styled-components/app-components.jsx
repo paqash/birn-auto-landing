@@ -3,28 +3,49 @@ import styled from "styled-components";
 import { resourcesUrl, screenResolutions } from "../../core/constants";
 
 export const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  padding-left: 50px;
+  padding: 0 60px 0 50px;
+
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    max-width: 1200px;
+    padding-right: 0;
+  }
 `;
 
 export const Text = styled.div`
   color: #fff;
-  font-size: 29px;
-  line-height: 40px;
+  font-size: 19px;
+  line-height: 30px;
   font-weight: 500;
   @media screen and (min-width: ${screenResolutions.small}px) {
-    font-size: 39px;
+    font-size: 35px;
     line-height: 50px;
   }
   @media screen and (min-width: ${screenResolutions.medium}px) {
-    font-size: 49px;
-    line-height: 70px;
+    font-size: 45px;
+    line-height: 60px;
+  }
+`;
+
+export const HightlightedText = styled.mark`
+  font-size: 19px;
+  background-color: #b72126;
+  color: #fff;
+  padding-bottom: 12px;
+  font-weight: 700;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    font-size: 45px;
+    line-height: 60px;
   }
 `;
 
@@ -85,26 +106,14 @@ export const Magnifier = styled.div`
   left: -30px;
 `;
 
-export const HightlightedText = styled.mark`
-  font-size: 39px;
-  background-color: #b72126;
-  color: #fff;
-  padding-bottom: 12px;
-  font-weight: 700;
-  @media screen and (min-width: ${screenResolutions.small}px) {
-    font-size: 49px;
-    line-height: 50px;
-  }
-  @media screen and (min-width: ${screenResolutions.medium}px) {
-    font-size: 59px;
-    line-height: 70px;
-  }
-`;
-
 export const ListOfOptions = styled.ul`
-  margin-top: 50px;
-  line-height: 8;
+  margin-top: 20px;
+  line-height: 5;
   margin-left: 18px;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    margin-top: 50px;
+    line-height: 8;
+  }
 `;
 
 export const ListItem = styled.li`

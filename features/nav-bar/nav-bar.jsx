@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { resourcesUrl } from "../../core/constants";
+import { resourcesUrl, screenResolutions } from "../../core/constants";
 
 const NavBarContainer = styled.div`
   position: fixed;
@@ -9,9 +9,12 @@ const NavBarContainer = styled.div`
   width: 100%;
   color: white;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1000px;
   justify-content: space-between;
   margin-top: 15px;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    max-width: 1200px;
+  }
 `;
 
 const BirnLogo = styled.img`

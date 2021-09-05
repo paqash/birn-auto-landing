@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { resourcesUrl } from "../../core/constants";
+import { resourcesUrl, screenResolutions } from "../../core/constants";
 import MainButton from "../shared-components/main-button";
 import {
   Container,
@@ -12,6 +12,10 @@ import {
 export const ShareWrapper = styled(Container)`
   opacity: 0;
   transition: opacity 1s ease-in 1s;
+  margin-top: 40px;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    margin-top: 0px;
+  }
 `;
 
 const Image = styled.img`
@@ -33,25 +37,12 @@ const Tirangle = styled.div`
   background-color: transparent;
 `;
 
-const TextOne = styled(Text)`
-  margin-left: 150px;
-  position: absolute;
-`;
-const TextTwo = styled(TextOne)`
-  margin-left: 360px;
-  margin-top: 60px;
-  position: absolute;
-`;
-const TextThree = styled(TextOne)`
-  margin-left: 50px;
-  position: absolute;
-  margin-left: 400px;
-  margin-top: 140px;
-`;
-
 const ImageContainer = styled.div`
   position: relative;
-  margin-top: 100px;
+  margin-top: 50px;
+  @media screen and (min-width: ${screenResolutions.medium}px) {
+    margin-top: 100px;
+  }
 `;
 
 const Share = () => {
