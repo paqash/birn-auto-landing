@@ -40,6 +40,7 @@ const HomePage = () => {
     <div>
       <VideoPlayer id="backgroundVideo" playsInline autoPlay muted loop>
         <source src={`${resourcesBaseUrl}/background.mp4`} type="video/mp4" />
+        <source src={`${resourcesBaseUrl}/background.webm`} type="video/webm" />
       </VideoPlayer>
       <ContainerWrapper>
         <Text>

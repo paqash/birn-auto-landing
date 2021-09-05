@@ -87,38 +87,37 @@ export default function Home() {
           onLeave={(origin) => {
             origin.item.classList.remove("dotted");
             if (origin.isFirst) {
-              document.getElementById("backgroundVideo").pause();
+              const videoPlayer = document.getElementById("backgroundVideo");
+              if (videoPlayer) videoPlayer.pause();
             }
           }}
           afterLoad={(origin, destination) => {
             const isDottedBackground = destination.item.dataset.dots;
-            console.log(isDottedBackground);
             if (isDottedBackground === "true") {
               destination.item.classList.add("dotted");
             }
             if (destination.isFirst) {
-              document.getElementById("backgroundVideo").play();
+              const videoPlayer = document.getElementById("backgroundVideo");
+              if (videoPlayer) videoPlayer.play();
             }
           }}
-          render={() =>
-            console.log("render prop change") || (
-              <ReactFullpage.Wrapper>
-                <div id="videoBackground" key="asdfa" className="section">
-                  <HomePage />
-                </div>
-                {images.map((item) => (
-                  <PageContainer
-                    data-dots={item.showDots}
-                    key={item.id}
-                    className="section"
-                    backgroundImage={item.backgroundImage}
-                  >
-                    {item.component}
-                  </PageContainer>
-                ))}
-              </ReactFullpage.Wrapper>
-            )
-          }
+          render={() => (
+            <ReactFullpage.Wrapper>
+              <div id="videoBackground" key="asdfa" className="section">
+                <HomePage />
+              </div>
+              {images.map((item) => (
+                <PageContainer
+                  data-dots={item.showDots}
+                  key={item.id}
+                  className="section"
+                  backgroundImage={item.backgroundImage}
+                >
+                  {item.component}
+                </PageContainer>
+              ))}
+            </ReactFullpage.Wrapper>
+          )}
         />
         <Navigation />
       </Main>
