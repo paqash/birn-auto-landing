@@ -23,3 +23,5 @@ export const screenResolutions = {
 };
 
 export const fullPageKey = publicRuntimeConfig.processEnv.FULLPAGE_KEY;
+
+export const detektorURL = "https://detektor.ba";

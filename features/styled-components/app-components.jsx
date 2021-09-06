@@ -110,6 +110,7 @@ export const ListOfOptions = styled.ul`
   margin-top: 20px;
   line-height: 5;
   margin-left: 18px;
+  list-style: none;
   @media screen and (min-width: ${screenResolutions.medium}px) {
     margin-top: 50px;
     line-height: 8;
@@ -117,7 +118,30 @@ export const ListOfOptions = styled.ul`
 `;
 
 export const ListItem = styled.li`
+  position: relative;
+  margin-left: 1em;
   &::marker {
     color: #fff;
+  }
+  &::before {
+    position: absolute;
+    left: -2em;
+    top: 1.2em;
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    border-right: 0.3em solid #fff;
+    border-top: 0.3em solid #fff;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+    @media screen and (min-width: ${screenResolutions.medium}px) {
+      left: -3em;
+      width: 1.1em;
+      height: 1.1em;
+      border-right: 0.45em solid #fff;
+      border-top: 0.45em solid #fff;
+      transform: rotate(45deg);
+      margin-right: 0.5em;
+    }
   }
 `;

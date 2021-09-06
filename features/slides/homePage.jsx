@@ -17,6 +17,7 @@ import {
   Text,
 } from "../styled-components/app-components";
 import MainButton from "../shared-components/main-button";
+import ScrollIndicator from "../shared-components/scroll-indicator";
 
 const VideoPlayer = styled.video`
   object-fit: cover;
@@ -33,6 +34,14 @@ const ContainerWrapper = styled(Container)`
   @media screen and (min-width: ${screenResolutions.medium}px) {
     margin-top: 0;
   }
+`;
+
+const ScrollIndicatorWrapper = styled(ScrollIndicator)`
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 70px;
 `;
 
 const HomePage = () => {
@@ -74,6 +83,7 @@ const HomePage = () => {
         </ShortStatsContainer>
         <MainButton />
       </ContainerWrapper>
+      <ScrollIndicatorWrapper />
     </div>
   );
 };
