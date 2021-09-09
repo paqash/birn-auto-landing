@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Head from "next/head";
 import ReactFullpage from "@fullpage/react-fullpage";
 import styled, { createGlobalStyle } from "styled-components";
@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const images = useMemo(() => {
     return [
       {
@@ -79,7 +80,7 @@ export default function Home() {
 
       <Main>
         <GlobalStyle />
-        <NavBar />
+        <NavBar handleMenuToggle={setIsMenuOpen} />
         <ReactFullpage
           licenseKey={fullPageKey}
           menu="#mainNavigation"
@@ -119,7 +120,7 @@ export default function Home() {
             </ReactFullpage.Wrapper>
           )}
         />
-        <Navigation />
+        <Navigation isMenuOpen={isMenuOpen} handleMenuToggle={setIsMenuOpen} />
       </Main>
     </div>
   );

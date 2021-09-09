@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { screenResolutions } from "../../core/constants";
 
 import MainButton from "../shared-components/main-button";
 import {
@@ -23,7 +24,7 @@ const TextWrapper = styled.div`
 `;
 
 const PlusButton = styled.div`
-  font-size: 200px;
+  font-size: 95px;
   color: #fff;
   line-height: 125px;
   transform: ${(props) => (props.open ? "rotate(45deg)" : "rotate(0)")};
@@ -31,12 +32,19 @@ const PlusButton = styled.div`
   transition-property: transform;
   transition-duration: 500ms;
   cursor: pointer;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    font-size: 200px;
+  }
 `;
 
 const ListOfOptionsWrapper = styled(ListOfOptions)`
   max-height: ${(props) => (props.open ? "600px" : "0px")};
   overflow: hidden;
   transition: max-height 0.6s ease;
+`;
+
+const MainButtonWrapper = styled(MainButton)`
+  margin-top: 10%;
 `;
 
 const InfoSlide = (props) => {
@@ -72,20 +80,20 @@ const InfoSlide = (props) => {
         </ListItem>
         <ListItem>
           <Text>
-            Koje su <HightlightedText>omiljene marke</HightlightedText>
+            Koje su <HightlightedText>omiljene marke</HightlightedText>{" "}
             političara i političarki,
           </Text>
         </ListItem>
         <ListItem>
           <Text>
             Podatke o tome{" "}
-            <HightlightedText>koliko se vašeg novca</HightlightedText>
-            troši na održavanje, gorivo, osiguranje, gume, putarine i pranje
-            službenih automobila
+            <HightlightedText>koliko se vašeg novca</HightlightedText> troši na
+            održavanje, gorivo, osiguranje, gume, putarine i pranje službenih
+            automobila
           </Text>
         </ListItem>
       </ListOfOptionsWrapper>
-      <MainButton />
+      <MainButtonWrapper />
     </InfoSlideWrapper>
   );
 };

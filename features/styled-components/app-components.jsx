@@ -4,15 +4,18 @@ import { resourcesUrl, screenResolutions } from "../../core/constants";
 
 export const Container = styled.div`
   max-width: 1000px;
-  width: 100%;
+  width: calc(100% - 50px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  padding: 0 60px 0 50px;
-
-  @media screen and (min-width: ${screenResolutions.medium}px) {
+  margin-top: 5%;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    padding: 0 60px 0 50px;
+    width: 100%;
+  }
+  @media screen and (min-width: ${screenResolutions.large}px) {
     max-width: 1200px;
     padding-right: 0;
   }
@@ -27,7 +30,7 @@ export const Text = styled.div`
     font-size: 35px;
     line-height: 50px;
   }
-  @media screen and (min-width: ${screenResolutions.medium}px) {
+  @media screen and (min-width: ${screenResolutions.large}px) {
     font-size: 45px;
     line-height: 60px;
   }
@@ -37,29 +40,38 @@ export const HightlightedText = styled.mark`
   font-size: 19px;
   background-color: #b72126;
   color: #fff;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
   font-weight: 700;
   @media screen and (min-width: ${screenResolutions.small}px) {
     font-size: 35px;
     line-height: 50px;
+    padding-bottom: 12px;
   }
-  @media screen and (min-width: ${screenResolutions.medium}px) {
+  @media screen and (min-width: ${screenResolutions.large}px) {
     font-size: 45px;
     line-height: 60px;
   }
 `;
 
 export const MainButtonWrapper = styled.button`
-  width: 260px;
-  height: 70px;
-  font-size: 28px;
+  width: 190px;
+  height: 50px;
+  font-size: 18px;
   font-weight: bold;
   background-color: #b72126;
   border-radius: 35px;
   color: #fff;
   border: none;
-  margin-top: 50px;
+  margin-top: 15%;
   cursor: pointer;
+  margin-left: calc(50% - 95px);
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    width: 260px;
+    height: 70px;
+    font-size: 28px;
+    margin-top: 50px;
+    margin-left: 0;
+  }
 `;
 
 export const ShortStatsContainer = styled.div`
@@ -67,15 +79,23 @@ export const ShortStatsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-direction: column;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 15%;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    flex-direction: row;
+    margin-top: 50px;
+  }
 `;
 
 export const StatsItemContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
+  width: 100%;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    width: 50%;
+  }
 `;
 
 export const StatsImage = styled.div`
@@ -83,13 +103,18 @@ export const StatsImage = styled.div`
   background-position: center;
   height: 50px;
   width: 50px;
-  margin-right: 20px;
+  margin-right: 10px;
 `;
 
 export const StatsText = styled.span`
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 800;
-  line-height: 40px;
+  line-height: 28px;
+  width: calc(100% - 60px);
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 `;
 
 export const ItalicText = styled.span`
@@ -104,14 +129,22 @@ export const Magnifier = styled.div`
   height: 117px;
   position: absolute;
   left: -30px;
+  display: none;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    display: block;
+  }
 `;
 
 export const ListOfOptions = styled.ul`
-  margin-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   line-height: 5;
-  margin-left: 18px;
   list-style: none;
-  @media screen and (min-width: ${screenResolutions.medium}px) {
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    margin-top: 20px;
+    margin-left: 18px;
+  }
+  @media screen and (min-width: ${screenResolutions.large}px) {
     margin-top: 50px;
     line-height: 8;
   }
@@ -119,22 +152,29 @@ export const ListOfOptions = styled.ul`
 
 export const ListItem = styled.li`
   position: relative;
-  margin-left: 1em;
+
   &::marker {
     color: #fff;
   }
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    margin-left: 1em;
+  }
   &::before {
-    position: absolute;
-    left: -2em;
-    top: 1.2em;
-    content: "";
-    width: 0.8em;
-    height: 0.8em;
-    border-right: 0.3em solid #fff;
-    border-top: 0.3em solid #fff;
-    transform: rotate(45deg);
-    margin-right: 0.5em;
-    @media screen and (min-width: ${screenResolutions.medium}px) {
+    display: none;
+    @media screen and (min-width: ${screenResolutions.small}px) {
+      position: absolute;
+      left: -2em;
+      top: 1.2em;
+      content: "";
+      width: 0.8em;
+      height: 0.8em;
+      border-right: 0.3em solid #fff;
+      border-top: 0.3em solid #fff;
+      transform: rotate(45deg);
+      margin-right: 0.5em;
+      display: block;
+    }
+    @media screen and (min-width: ${screenResolutions.large}px) {
       left: -3em;
       width: 1.1em;
       height: 1.1em;

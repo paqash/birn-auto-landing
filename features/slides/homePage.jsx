@@ -30,8 +30,10 @@ const VideoPlayer = styled.video`
 `;
 
 const ContainerWrapper = styled(Container)`
-  margin-top: 40px;
-  @media screen and (min-width: ${screenResolutions.medium}px) {
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    margin-top: 40px;
+  }
+  @media screen and (min-width: ${screenResolutions.large}px) {
     margin-top: 0;
   }
 `;
@@ -41,13 +43,23 @@ const ScrollIndicatorWrapper = styled(ScrollIndicator)`
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 70px;
+  bottom: 20px;
+  @media screen and (min-width: ${screenResolutions.small}px) {
+    bottom: 70px;
+  }
 `;
 
 const HomePage = () => {
   return (
     <div>
-      <VideoPlayer id="backgroundVideo" playsInline autoPlay muted loop>
+      <VideoPlayer
+        id="backgroundVideo"
+        playsInline
+        autoPlay
+        muted
+        loop
+        poster={`${resourcesUrl}/background.png`}
+      >
         <source src={`${resourcesBaseUrl}/background.mp4`} type="video/mp4" />
         <source src={`${resourcesBaseUrl}/background.webm`} type="video/webm" />
       </VideoPlayer>
@@ -75,7 +87,6 @@ const HomePage = () => {
             <StatsImage
               style={{
                 backgroundImage: `url(${resourcesUrl}/automobili.png)`,
-                width: "70px",
               }}
             />
             <StatsText>XXX SLUŽBENIH AUTOMOBILA U BAZI</StatsText>

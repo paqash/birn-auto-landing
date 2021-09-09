@@ -4,7 +4,7 @@ import { resourcesUrl, screenResolutions } from "../../core/constants";
 import { Container } from "../styled-components/app-components";
 
 const MyMoneyImage = styled.img`
-  width: 50%;
+  width: 80%;
   @media screen and (min-width: ${screenResolutions.medium}px) {
     width: 70%;
   }
