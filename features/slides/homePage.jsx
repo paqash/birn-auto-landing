@@ -18,6 +18,7 @@ import {
 } from "../styled-components/app-components";
 import MainButton from "../shared-components/main-button";
 import ScrollIndicator from "../shared-components/scroll-indicator";
+import {tenders} from "../../api/scrape";
 
 const VideoPlayer = styled.video`
   object-fit: cover;
@@ -81,7 +82,7 @@ const HomePage = () => {
             <StatsImage
               style={{ backgroundImage: `url(${resourcesUrl}/tenderi.png)` }}
             />
-            <StatsText>XXX TENDERA</StatsText>
+            <StatsText>{tenders} TENDERA</StatsText>
           </StatsItemContainer>
           <StatsItemContainer>
             <StatsImage

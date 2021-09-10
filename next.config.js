@@ -10,5 +10,9 @@ module.exports = withImages(
     publicRuntimeConfig: {
       processEnv: process.env,
     },
+    webpack: (config) => {
+      config.experiments = { topLevelAwait: true };
+      return config;
+    },
   })
 );

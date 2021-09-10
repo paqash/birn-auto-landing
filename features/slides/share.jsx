@@ -64,7 +64,7 @@ const Share = () => {
         </Tirangle>
         <Text>
           Pratite naše naloge na društvenim mrežama i podijelite sadržaj sa Baze
-          us hashtag <HightlightedText>#mojepare</HightlightedText>
+          uz hashtag <HightlightedText>#mojepare</HightlightedText>
         </Text>
       </ImageContainer>
       <MainButton />
