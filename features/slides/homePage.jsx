@@ -30,7 +30,7 @@ const VideoPlayer = styled.video`
 `;
 
 const ContainerWrapper = styled(Container)`
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     margin-top: 40px;
   }
   @media screen and (min-width: ${screenResolutions.large}px) {
@@ -44,7 +44,7 @@ const ScrollIndicatorWrapper = styled(ScrollIndicator)`
   right: 0;
   margin: auto;
   bottom: 20px;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     bottom: 70px;
   }
 `;

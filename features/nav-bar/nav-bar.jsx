@@ -16,7 +16,7 @@ const NavBarContainer = styled.div`
   max-width: 100%;
   justify-content: space-between;
   margin-top: 25px;
-  @media screen and (min-width: ${screenResolutions.extraSmall}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
     max-width: 1200px;
   }
 `;
@@ -24,7 +24,7 @@ const NavBarContainer = styled.div`
 const BirnLogo = styled.img`
   width: 111px;
   height: 72px;
-  @media screen and (min-width: ${screenResolutions.extraSmall}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
     width: 170px;
     height: 100px;
   }
@@ -35,7 +35,7 @@ const DetektorContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: calc(100% - 111px);
-  @media screen and (min-width: ${screenResolutions.extraSmall}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
     width: calc(100% - 170px);
   }
 `;
@@ -47,7 +47,7 @@ const DetektorLogo = styled.div`
   background-position: center;
   cursor: pointer;
   background-image: url(${resourcesUrl}/detektor.png);
-  @media screen and (min-width: ${screenResolutions.extraSmall}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
     width: 150px;
     height: 55px;
   }
@@ -59,7 +59,7 @@ const MyMoneyLogo = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${resourcesUrl}/mojepare.png);
-  @media screen and (min-width: ${screenResolutions.extraSmall}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
     width: 100px;
     height: 60px;
   }
@@ -72,7 +72,7 @@ const Menu = styled.div`
   background-position: center;
   background-image: url(${resourcesUrl}/menu.png);
   margin-left: 20px;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     display: none;
   }
 `;

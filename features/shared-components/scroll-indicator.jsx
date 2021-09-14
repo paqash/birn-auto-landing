@@ -10,7 +10,7 @@ const ScrollIndicatorWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     width: 80px;
     height: 80px;
     border-radius: 80px;
@@ -26,7 +26,7 @@ const Arrow = styled.i`
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
 
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     width: 20px;
     height: 20px;
     border-right: 7px solid #fff;

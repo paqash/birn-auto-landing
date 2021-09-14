@@ -11,9 +11,10 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
   z-index: 1;
   margin-top: 5%;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     padding: 0 60px 0 50px;
-    width: 100%;
+    width: 75%;
+    margin-top: 0;
   }
   @media screen and (min-width: ${screenResolutions.large}px) {
     max-width: 1200px;
@@ -26,7 +27,11 @@ export const Text = styled.div`
   font-size: 19px;
   line-height: 30px;
   font-weight: 500;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     font-size: 35px;
     line-height: 50px;
   }
@@ -42,7 +47,11 @@ export const HightlightedText = styled.mark`
   color: #fff;
   padding-bottom: 6px;
   font-weight: 700;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     font-size: 35px;
     line-height: 50px;
     padding-bottom: 12px;
@@ -65,7 +74,7 @@ export const MainButtonWrapper = styled.button`
   margin-top: 15%;
   cursor: pointer;
   margin-left: calc(50% - 95px);
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     width: 260px;
     height: 70px;
     font-size: 28px;
@@ -82,7 +91,7 @@ export const ShortStatsContainer = styled.div`
   flex-direction: column;
   width: 100%;
   margin-top: 15%;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     flex-direction: row;
     margin-top: 50px;
   }
@@ -93,7 +102,7 @@ export const StatsItemContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     width: 50%;
   }
 `;
@@ -111,7 +120,11 @@ export const StatsText = styled.span`
   font-weight: 800;
   line-height: 28px;
   width: calc(100% - 60px);
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     font-size: 40px;
     line-height: 40px;
   }
@@ -130,7 +143,7 @@ export const Magnifier = styled.div`
   position: absolute;
   left: -30px;
   display: none;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     display: block;
   }
 `;
@@ -140,7 +153,7 @@ export const ListOfOptions = styled.ul`
   margin-bottom: 0px;
   line-height: 5;
   list-style: none;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     margin-top: 20px;
     margin-left: 18px;
   }
@@ -156,24 +169,21 @@ export const ListItem = styled.li`
   &::marker {
     color: #fff;
   }
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     margin-left: 1em;
   }
   &::before {
-    display: none;
-    @media screen and (min-width: ${screenResolutions.small}px) {
-      position: absolute;
-      left: -2em;
-      top: 1.2em;
-      content: "";
-      width: 0.8em;
-      height: 0.8em;
-      border-right: 0.3em solid #fff;
-      border-top: 0.3em solid #fff;
-      transform: rotate(45deg);
-      margin-right: 0.5em;
-      display: block;
-    }
+    position: absolute;
+    left: -2em;
+    top: 0.8em;
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    border-right: 0.3em solid #fff;
+    border-top: 0.3em solid #fff;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+    display: block;
     @media screen and (min-width: ${screenResolutions.large}px) {
       left: -3em;
       width: 1.1em;

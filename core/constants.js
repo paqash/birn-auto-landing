@@ -43,8 +43,10 @@ export const navItems = [
 export const dbUrl = "http://auta.detektor.ba/";
 
 export const screenResolutions = {
-  extraSmall: 600,
-  small: 769,
+  mobileExtraSmall: 415,
+  mobileSmall: 600,
+  mobile: 769,
+  small: 1025,
   medium: 1200,
   large: 1537,
 };

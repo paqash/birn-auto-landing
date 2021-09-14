@@ -32,7 +32,7 @@ const PlusButton = styled.div`
   transition-property: transform;
   transition-duration: 500ms;
   cursor: pointer;
-  @media screen and (min-width: ${screenResolutions.small}px) {
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
     font-size: 200px;
   }
 `;
@@ -44,7 +44,10 @@ const ListOfOptionsWrapper = styled(ListOfOptions)`
 `;
 
 const MainButtonWrapper = styled(MainButton)`
-  margin-top: 10%;
+  margin-top: 5%;
+  @media screen and (min-width: ${screenResolutions.large}px) {
+    margin-top: 10%;
+  }
 `;
 
 const InfoSlide = (props) => {
