@@ -20,7 +20,7 @@ const Flag = (props) => {
       <Text>
         Novinari BIRN-a BiH su u protekle tri godine{" "}
         <HightlightedText>
-          crvenom zastavicom označili ukupno xxx tendera
+          crvenom zastavicom označili ukupno 170 tendera
         </HightlightedText>{" "}
         za nabavku vozila u kojima je ograničena konkurencija ili na drugi način
         omogućeno favoriziranje određenih ponuđača.

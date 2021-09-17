@@ -47,6 +47,9 @@ const Tirangle = styled.div`
   }
   @media screen and (min-width: ${screenResolutions.mobile}px) {
     margin-left: -100px;
+    margin-top: -55px;
+  }
+  @media screen and (min-width: ${screenResolutions.large}px) {
     margin-top: -10px;
   }
 `;
@@ -57,6 +60,10 @@ const ImageContainer = styled.div`
   max-width: 100%;
   @media screen and (min-width: ${screenResolutions.mobileExtraSmall}px) {
     max-width: 80%;
+  }
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
+    margin-top: 60px;
+    max-width: 75%;
   }
   @media screen and (min-width: ${screenResolutions.large}px) {
     margin-top: 100px;

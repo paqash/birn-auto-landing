@@ -32,8 +32,8 @@ export const Text = styled.div`
     line-height: 40px;
   }
   @media screen and (min-width: ${screenResolutions.mobile}px) {
-    font-size: 35px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 40px;
   }
   @media screen and (min-width: ${screenResolutions.large}px) {
     font-size: 45px;
@@ -52,9 +52,9 @@ export const HightlightedText = styled.mark`
     line-height: 40px;
   }
   @media screen and (min-width: ${screenResolutions.mobile}px) {
-    font-size: 35px;
-    line-height: 50px;
-    padding-bottom: 12px;
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 5px;
   }
   @media screen and (min-width: ${screenResolutions.large}px) {
     font-size: 45px;
@@ -75,6 +75,13 @@ export const MainButtonWrapper = styled.button`
   cursor: pointer;
   margin-left: calc(50% - 95px);
   @media screen and (min-width: ${screenResolutions.mobile}px) {
+    width: 220px;
+    height: 50px;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  @media screen and (min-width: ${screenResolutions.large}px) {
     width: 260px;
     height: 70px;
     font-size: 28px;
@@ -124,7 +131,7 @@ export const StatsText = styled.span`
     font-size: 30px;
     line-height: 40px;
   }
-  @media screen and (min-width: ${screenResolutions.mobile}px) {
+  @media screen and (min-width: ${screenResolutions.large}px) {
     font-size: 40px;
     line-height: 40px;
   }
@@ -174,18 +181,27 @@ export const ListItem = styled.li`
   }
   &::before {
     position: absolute;
-    left: -2em;
-    top: 0.8em;
+    left: -1.2em;
+    top: 0.7em;
     content: "";
-    width: 0.8em;
-    height: 0.8em;
-    border-right: 0.3em solid #fff;
-    border-top: 0.3em solid #fff;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.2em solid #fff;
+    border-top: 0.2em solid #fff;
     transform: rotate(45deg);
     margin-right: 0.5em;
     display: block;
+    @media screen and (min-width: ${screenResolutions.mobileSmall}px) {
+      top: 0.8em;
+      left: -2em;
+      width: 0.8em;
+      height: 0.8em;
+      border-right: 0.3em solid #fff;
+      border-top: 0.3em solid #fff;
+    }
     @media screen and (min-width: ${screenResolutions.large}px) {
       left: -3em;
+      top: 1.2em;
       width: 1.1em;
       height: 1.1em;
       border-right: 0.45em solid #fff;

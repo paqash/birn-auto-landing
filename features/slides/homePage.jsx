@@ -54,15 +54,14 @@ const HomePage = () => {
     <div>
       <VideoPlayer
         id="backgroundVideo"
-        playsInline
         autoPlay
-        muted
         loop
+        muted
+        playsInline
         poster={`${resourcesUrl}/background.png`}
-      >
-        <source src={`${resourcesBaseUrl}/background.mp4`} type="video/mp4" />
-        <source src={`${resourcesBaseUrl}/background.webm`} type="video/webm" />
-      </VideoPlayer>
+        src={`${resourcesBaseUrl}/background.webm`}
+        type="video/webm"
+      ></VideoPlayer>
       <ContainerWrapper>
         <Text>
           <Magnifier />
@@ -81,7 +80,7 @@ const HomePage = () => {
             <StatsImage
               style={{ backgroundImage: `url(${resourcesUrl}/tenderi.png)` }}
             />
-            <StatsText>XXX TENDERA</StatsText>
+            <StatsText>2.231 TENDERA</StatsText>
           </StatsItemContainer>
           <StatsItemContainer>
             <StatsImage
@@ -89,7 +88,7 @@ const HomePage = () => {
                 backgroundImage: `url(${resourcesUrl}/automobili.png)`,
               }}
             />
-            <StatsText>XXX SLUŽBENIH AUTOMOBILA U BAZI</StatsText>
+            <StatsText>11.693 SLUŽBENIH AUTOMOBILA U BAZI</StatsText>
           </StatsItemContainer>
         </ShortStatsContainer>
         <MainButton />

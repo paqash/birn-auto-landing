@@ -12,28 +12,39 @@ const NavigationWrapper = styled.ul`
   top: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
+  @media screen and (min-width: ${screenResolutions.mobile}px) {
+    right: -35px;
+  }
   @media screen and (min-width: ${screenResolutions.medium}px) {
     right: -25px;
   }
 `;
 
 const Pil = styled.div`
-  width: 23px;
-  height: 69px;
+  width: 15px;
+  height: 50px;
   border: 1px solid #bebebf;
   border-radius: 11px;
   &:hover {
     background-color: #fff;
   }
+  @media screen and (min-width: ${screenResolutions.large}px) {
+    width: 23px;
+    height: 69px;
+  }
 `;
 
 const NavImage = styled.div`
   margin-right: 10px;
-  width: 53px;
-  height: 69px;
+  width: 35px;
+  height: 50px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media screen and (min-width: ${screenResolutions.large}px) {
+    width: 53px;
+    height: 69px;
+  }
 `;
 const NavItem = styled.div`
   display: flex;
@@ -124,7 +135,11 @@ const Navigation = (props) => {
             return null;
           }
           return (
-            <ListItem key={item.name} data-menuanchor={item.name}>
+            <ListItem
+              key={item.name}
+              data-menuanchor={item.name}
+              className={item.class}
+            >
               <Link href={`#${item.name}`}>
                 <NavItem>
                   <NavImage style={{ backgroundImage: `url(${item.image})` }} />

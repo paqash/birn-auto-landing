@@ -33,6 +33,10 @@ const PlusButton = styled.div`
   transition-duration: 500ms;
   cursor: pointer;
   @media screen and (min-width: ${screenResolutions.mobile}px) {
+    font-size: 120px;
+    margin-left: 20px;
+  }
+  @media screen and (min-width: ${screenResolutions.large}px) {
     font-size: 200px;
   }
 `;
@@ -70,7 +74,7 @@ const InfoSlide = (props) => {
           <Text>
             Voznom parku{" "}
             <HightlightedText>
-              xxxx institucija i xxxx javnih kompanija
+              597 institucija i 264 javnih kompanija
             </HightlightedText>
             ,
           </Text>

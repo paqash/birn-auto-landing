@@ -11,6 +11,7 @@ export const navItems = [
     name: "homePage",
     image: `${resourcesUrl}/1.png`,
     label: "Dobro došli na Bazu",
+    class: "active",
   },
   {
     name: "aboutDatabase",
