@@ -41,7 +41,7 @@ export const navItems = [
   },
 ];
 
-export const dbUrl = "http://auta.detektor.ba/";
+export const dbUrl = "http://auta2021.detektor.ba/";
 
 export const screenResolutions = {
   mobileExtraSmall: 415,
