@@ -28,7 +28,7 @@ const Stats = (props) => {
       </Text>
       <TextWrapper>
         Samo ove godine je do sada za limuzine{" "}
-        <HightlightedText>potrošeno 7.046.829 KM</HightlightedText>, dok je za
+        <HightlightedText>izdvojeno 7.046.829 KM</HightlightedText>, dok je za
         sve vrste vozila izdvojeno{" "}
         <HightlightedText>12.399.651 KM iz budžeta.</HightlightedText>
       </TextWrapper>
